@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import GradientText from "@/components/GradientText";
 import TextType from "@/components/TextType";
-import { MeshGradient } from "@paper-design/shaders-react";
+import ShaderBackground from "@/components/ShaderBackground";
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
@@ -186,31 +186,8 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-32 overflow-hidden">
-        <div aria-hidden className="absolute inset-0 pointer-events-none">
-          <MeshGradient
-            width="100%"
-            height="100%"
-            colors={[
-              "#8b37eb6e",
-              "#c800ff2b",
-              "#ffffff75",
-              "#ffffffc9",
-              "#ffffff",
-              "#ffffff",
-              "#ffffff",
-              "#ffffff",
-              "#ffffff",
-              "#ffffff00",
-            ]}
-            distortion={0.44}
-            swirl={0.1}
-            grainMixer={0}
-            grainOverlay={0}
-            speed={0.68}
-            className="h-full w-full"
-          />
-        </div>
+      <section className="relative bg-white pt-20 pb-32 overflow-hidden">
+        <ShaderBackground />
         <div
           className="absolute inset-0 bg-grid-slate-100 bg-[size:20px_20px] opacity-20"
           aria-hidden

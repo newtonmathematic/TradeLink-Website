@@ -1,0 +1,34 @@
+.text-type {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 0.125rem;
+}
+
+.text-type__content {
+  display: inline-block;
+  white-space: nowrap;
+  font: inherit;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  white-space: pre;
+  font: inherit;
+  animation: text-type-blink linear infinite;
+}
+
+.text-type__cursor--hidden {
+  opacity: 0;
+}
+
+@keyframes text-type-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
